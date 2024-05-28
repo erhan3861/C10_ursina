@@ -80,10 +80,10 @@ def yukle(kayitDosyasi):
     
 dosyaİsimleri = ["kayitSelman.json", "kayitHakan.json", "kayitCaglar.json", "kayitMustafa.json", "kayitAbdullah.json", "kayitİhsan.json"]
 
-# for d in dosyaİsimleri:
-#     index = dosyaİsimleri.index(d)
-#     btn1 = Button(text=d[5:-5], position=(-.8 + index*0.3, .4), scale=.1, on_click = lambda x = d: yukle(x))
-#     btn1.fit_to_text()
+for d in dosyaİsimleri:
+    index = dosyaİsimleri.index(d)
+    btn1 = Button(text=d[5:-5], position=(-.8 + index*0.3, .4), scale=.1, on_click = lambda x = d: yukle(x))
+    btn1.fit_to_text()
 
 yukle(dosyaİsimleri[0])
 
