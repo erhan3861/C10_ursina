@@ -25,12 +25,12 @@ def update():
     
 app = Ursina(borderless=False)
 
-car = FPS(model="car_green_big2", speed=20, origin_y = -.5)
+car = FPS(model="car", speed=20, origin_y = -.5)
 car.position = Vec3(33, 0.7, 0)
 
 ground = Entity(model="plane", scale=600, texture="grass", collider="box")
 
-track = Entity(model = "YOL", scale=300, y=8, z=200)
+track = Entity(model = "track", scale=300, y=8, z=200)
 
 collisions = load_blender_scene(name="track_collision", reload=True)
 collisions.parent = track
