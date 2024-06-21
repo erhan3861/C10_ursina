@@ -4,10 +4,8 @@ from ursina.prefabs.first_person_controller import FirstPersonController as FPS
 
 Entity.default_shader = bls
 
-
 def input(key):
-    if key == "z":
-        car.position = collisions.duz1.world_position
+
     if held_keys["tab"]:
         camera.rotation_y = 180
         camera.z = 5
@@ -36,20 +34,19 @@ collisions = load_blender_scene(name="track_collision", reload=True)
 collisions.parent = track
 
 for e in collisions.children:
-    if "duz" in e.name:
-        e.color = color.red
-    else:
-        e.color = color.lime
-    e.color = color.clear
+    e.color = color.lime
     e.collider = "box"
     e.double_sided = True
-    # e.y -= .005
+    e.y -= 8/300
 
+# bütün zemin collider nesneleri bu değere ayarlanabilir veya
+# blender çıktısı almadan bu değere alınabilir
 collisions.zemin1.world_y = 0.7
     
 Sky(texture="sky_sunset")
 
 camera.z = -3
 
+# EditorCamera()
 
 app.run()

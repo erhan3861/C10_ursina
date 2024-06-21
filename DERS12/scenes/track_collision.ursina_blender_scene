@@ -35,6 +35,14 @@ meshes = {
     uvs=[(1.0,0.0),(0.0,1.0),(0.0,0.0),(1.0,0.0),(1.0,1.0),(0.0,1.0)],
 ),
 
+'Plane.007' : Mesh(
+    vertices=[(1.0,0.0,-1.0),(-1.0,0.0,1.0),(-1.0,0.0,-1.0),(1.0,0.0,-1.0),(1.0,0.0,1.0),(-1.0,0.0,1.0)],
+    triangles=[],
+    normals=[(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0)],
+    colors=[],
+    uvs=[(1.0,0.0),(0.0,1.0),(0.0,0.0),(1.0,0.0),(1.0,1.0),(0.0,1.0)],
+),
+
 'Plane.005' : Mesh(
     vertices=[(1.0,0.0,-1.0),(-1.0,0.0,1.0),(-1.0,0.0,-1.0),(1.0,0.0,-1.0),(1.0,0.0,1.0),(-1.0,0.0,1.0)],
     triangles=[],
@@ -59,6 +67,14 @@ meshes = {
     uvs=[(1.0,0.0),(0.0,1.0),(0.0,0.0),(1.0,0.0),(1.0,1.0),(0.0,1.0)],
 ),
 
+'Plane.009' : Mesh(
+    vertices=[(1.0,0.0,-1.0),(-1.0,0.0,1.0),(-1.0,0.0,-1.0),(1.0,0.0,-1.0),(1.0,0.0,1.0),(-1.0,0.0,1.0)],
+    triangles=[],
+    normals=[(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0)],
+    colors=[],
+    uvs=[(1.0,0.0),(0.0,1.0),(0.0,0.0),(1.0,0.0),(1.0,1.0),(0.0,1.0)],
+),
+
 'Plane.004' : Mesh(
     vertices=[(1.0,0.0,-1.0),(-1.0,0.0,1.0),(-1.0,0.0,-1.0),(1.0,0.0,-1.0),(1.0,0.0,1.0),(-1.0,0.0,1.0)],
     triangles=[],
@@ -68,6 +84,14 @@ meshes = {
 ),
 
 'Plane.001' : Mesh(
+    vertices=[(1.0,0.0,-1.0),(-1.0,0.0,1.0),(-1.0,0.0,-1.0),(1.0,0.0,-1.0),(1.0,0.0,1.0),(-1.0,0.0,1.0)],
+    triangles=[],
+    normals=[(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0)],
+    colors=[],
+    uvs=[(1.0,0.0),(0.0,1.0),(0.0,0.0),(1.0,0.0),(1.0,1.0),(0.0,1.0)],
+),
+
+'Plane.008' : Mesh(
     vertices=[(1.0,0.0,-1.0),(-1.0,0.0,1.0),(-1.0,0.0,-1.0),(1.0,0.0,-1.0),(1.0,0.0,1.0),(-1.0,0.0,1.0)],
     triangles=[],
     normals=[(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0),(0.0,1.0,0.0)],
@@ -1089,7 +1113,7 @@ t = perf_counter()
 scene_parent.cikis1 = Entity(
     name='cikis1',
     parent=scene_parent,
-    position=Vec3(0.11063, -0.00871, -1.07418),
+    position=Vec3(0.11063, 0.01443, -1.07418),
     rotation=(15.31525, -0.0, -0.0),
     scale=Vec3(0.01909, 1.00569, 0.05152),
     model=copy(meshes['Plane.003']),
@@ -1098,16 +1122,25 @@ scene_parent.cikis1 = Entity(
 scene_parent.cikis2 = Entity(
     name='cikis2',
     parent=scene_parent,
-    position=Vec3(-0.04522, -0.00555, -0.58976),
+    position=Vec3(-0.04522, 0.01759, -0.58976),
     rotation=(-20.934, -90.0, 0.0),
     scale=Vec3(0.01871, 1.02471, 0.0445),
     model=copy(meshes['Plane']),
     ignore=True,
     )
+scene_parent.cikis3 = Entity(
+    name='cikis3',
+    parent=scene_parent,
+    position=Vec3(-0.11105, 0.01702, -0.27324),
+    rotation=(159.97097, -0.0, -0.0),
+    scale=Vec3(0.01871, 1.0, 0.04968),
+    model=copy(meshes['Plane.007']),
+    ignore=True,
+    )
 scene_parent.duz1 = Entity(
     name='duz1',
     parent=scene_parent,
-    position=Vec3(0.11063, 0.00491, -1.15037),
+    position=Vec3(0.11063, 0.02805, -1.15037),
     rotation=(-0.0, -0.0, -0.0),
     scale=Vec3(0.01909, 1.00569, -0.02642),
     model=copy(meshes['Plane.005']),
@@ -1116,7 +1149,7 @@ scene_parent.duz1 = Entity(
 scene_parent.duz21 = Entity(
     name='duz21',
     parent=scene_parent,
-    position=Vec3(-0.20672, 0.00651, -0.50008),
+    position=Vec3(-0.20672, 0.02965, -0.50008),
     rotation=(-0.0, 156.49829, -0.0),
     scale=Vec3(0.01866, 1.0914, 0.04428),
     model=copy(meshes['Plane.002']),
@@ -1125,16 +1158,25 @@ scene_parent.duz21 = Entity(
 scene_parent.duz22 = Entity(
     name='duz22',
     parent=scene_parent,
-    position=Vec3(-0.13011, 0.00651, -0.57539),
+    position=Vec3(-0.13011, 0.02965, -0.57539),
     rotation=(-0.0, 112.99558, -0.0),
     scale=Vec3(0.01948, 1.0914, 0.05886),
     model=copy(meshes['Plane.006']),
     ignore=True,
     )
+scene_parent.duz3 = Entity(
+    name='duz3',
+    parent=scene_parent,
+    position=Vec3(-0.11105, 0.03404, -0.19935),
+    rotation=(-0.0, -0.0, -0.0),
+    scale=Vec3(0.01871, 1.0, 0.02722),
+    model=copy(meshes['Plane.009']),
+    ignore=True,
+    )
 scene_parent.inis1 = Entity(
     name='inis1',
     parent=scene_parent,
-    position=Vec3(0.11063, -0.01034, -1.23036),
+    position=Vec3(0.11063, 0.0128, -1.23036),
     rotation=(-16.01256, -0.0, -0.0),
     scale=Vec3(0.01909, 1.01127, 0.05489),
     model=copy(meshes['Plane.004']),
@@ -1143,16 +1185,25 @@ scene_parent.inis1 = Entity(
 scene_parent.inis2 = Entity(
     name='inis2',
     parent=scene_parent,
-    position=Vec3(-0.21818, -0.00949, -0.40876),
+    position=Vec3(-0.21818, 0.01365, -0.40876),
     rotation=(-16.73733, 179.99996, -0.0),
     scale=Vec3(0.01871, 1.10764, 0.05295),
     model=copy(meshes['Plane.001']),
     ignore=True,
     )
+scene_parent.inis3 = Entity(
+    name='inis3',
+    parent=scene_parent,
+    position=Vec3(-0.11105, 0.01702, -0.12546),
+    rotation=(-159.97099, -0.0, -0.0),
+    scale=Vec3(0.01871, 1.0, 0.04968),
+    model=copy(meshes['Plane.008']),
+    ignore=True,
+    )
 scene_parent.zemin1 = Entity(
     name='zemin1',
     parent=scene_parent,
-    position=Vec3(0.1114, -0.02024, -0.78177),
+    position=Vec3(0.1114, 0.0029, -0.78177),
     rotation=(-0.0, -0.0, -0.0),
     scale=Vec3(-0.05422, -0.05422, -0.50333),
     model=copy(meshes['mesh_id43.001']),
