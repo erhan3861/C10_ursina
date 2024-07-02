@@ -39,7 +39,7 @@ def save_selected_meshes_to_json(filepath):
     print(f"Saved {len(selected_meshes)} mesh objects to {filepath}")
 
 
-output_path = r"D:\pythonDerslerim\C10_ursina\DERS13\assets\colliders.json"
+output_path = r"D:\pythonDerslerim\C10_ursina\DERS14\assets\colliders.json"
 
 # Save the selected meshes to JSON
 save_selected_meshes_to_json(output_path)
