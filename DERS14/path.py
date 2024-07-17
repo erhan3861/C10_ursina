@@ -5,7 +5,7 @@ import json
 Entity.default_shader = bls
 
 class Path(Entity):
-    def __init__(self, colliders, **kwargs):
+    def __init__(self, colliders):
         super().__init__()
         self.points = [Point(pos=i) for i in self.load_path()]
         self.lines = Entity(model=Mesh(vertices=[i for i in self.load_path()], mode='line', thickness=5))
@@ -46,7 +46,7 @@ class Point(Draggable):
     
     def __init__(self, pos):
         super().__init__()
-        self.parent = scene
+        self.parent = scene # !!!!!!!! 3 BOYUTA TAŞIYORUZ
         self.model = "sphere"
         self.position = pos
         self.color = color.red
@@ -60,7 +60,7 @@ class Point(Draggable):
             p.color = color.red
         self.color = color.lime
 
-    def input(self, key):
+    def input(self, key): # orjinali değiştiriyoruz
         if key == "x":
             self.lock = (0,1,1)
             self.plane_direction = (0,1,1)
@@ -79,7 +79,7 @@ class Point(Draggable):
         elif key == "c":
             self.visible = not self.visible
 
-        super().input(key)
+        super().input(key) # !!! mutlaka yazmalıyız
         
 
     

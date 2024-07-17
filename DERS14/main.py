@@ -7,8 +7,8 @@ from car import *
 Entity.default_shader = bls
 
 def input(key):
-    if held_keys["1"]: ground.x -= 0.1
-    elif held_keys["2"]: ground.x += 0.1
+    if held_keys["1"]: camera.x -= 0.1
+    elif held_keys["2"]: camera.x += 0.1
     elif held_keys["3"]: camera.y -= 0.1
     elif held_keys["4"]: camera.y += 0.1
     elif held_keys["5"]: camera.z -= 0.1
@@ -18,11 +18,11 @@ def input(key):
         for i in colliders :
             i.visible = not i.visible
 
-    elif held_keys["tab"]:
+    elif held_keys["tab"]: # tab tuşuna basıldıkça
         camera.rotation_y = 180
         camera.z = 5
 
-    elif key == "tab up":
+    elif key == "tab up": # tab tuşunadan elimizi çekince
         camera.rotation_y = 0
         camera.z = -3
 
@@ -93,3 +93,5 @@ camera.z = -4
 # Uygulamayı başlat
 app.run()
 
+# Bullet yada Ball ekleyerek botu vurmak
+# arayüz eklemenizi

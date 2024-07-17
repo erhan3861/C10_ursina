@@ -15,8 +15,6 @@ class Car(Entity):
         self.sequence = Sequence(loop=True, auto_destroy=False)
         self.route = self.load_route()
 
-        self.event_list = [] # olaylar listesi
-
         self.on_click = self.select_obj # seçim
 
     def input(self, key):
@@ -27,9 +25,9 @@ class Car(Entity):
         elif key == "e":  
             self.stop = not self.stop
             if self.stop :
-                self.sequence.pause()
+                self.sequence.pause() # duraklatmak
             else:
-                self.sequence.resume()
+                self.sequence.resume() # devam ettir
 
 
     def select_obj(self):
