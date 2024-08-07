@@ -32,6 +32,7 @@ def input(key):
         ball.position = Vec3(0, 2, -250) # topun başlangıç konumu
         # if mouse.world_point:
         #     ball.position = mouse.world_point
+    
 
 def shoot():
     ball.start = 1 # topun çıkışını haber veriyoruz
