@@ -75,7 +75,7 @@ class Enemy(Entity):
             self.actor.play("attack")
         elif key == "3":
             self.actor.play("walk_normal")
-
+# MARK: input
 def input(key):
     if key == 'left mouse down':
         dir = camera.forward + Vec3(0, 0.01, 0)

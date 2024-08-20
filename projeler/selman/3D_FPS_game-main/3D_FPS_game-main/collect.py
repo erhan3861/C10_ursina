@@ -49,8 +49,6 @@ class Collect(Entity):
             
             destroy(self)
 
-    
-            
             
 if __name__ == "__main__":
     from ursina.shaders import lit_with_shadows_shader, basic_lighting_shader as bls
